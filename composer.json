@@ -1,0 +1,32 @@
+{
+    "name": "chris/template-php-oop",
+    "type": "project",
+    "description": "A opinionated PHP template for small to medium projects",
+    "authors": [
+        {
+            "name": "Christian",
+            "email": "christiannmenezes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "league/plates": "^3.4",
+        "symfony/var-dumper": "^6.1",
+        "vlucas/phpdotenv": "^5.4",
+        "robmorgan/phinx": "^0.12.12"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.10",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public/",
+        "check-style": "php-cs-fixer fix --diff --verbose --dry-run .",
+        "fix-style": "php-cs-fixer fix . --rules=@PSR12",
+        "phinx": "vendor/bin/phinx"
+    }
+}
